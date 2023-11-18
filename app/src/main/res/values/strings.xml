@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SimpleToDoApp</string>
+    <string name="lets_do_it">Let\'s do-it</string>
+    <string name="enter_todo">Enter TO-DO</string>
+    <string name="done">Done</string>
+    <string name="add_in_daily_tasks">Do you want to add this as daily task?</string>
+</resources>
