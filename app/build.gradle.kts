@@ -82,5 +82,15 @@ android {
         implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.2")
         kapt("com.google.dagger:hilt-android-compiler:2.44")
         kapt("androidx.hilt:hilt-compiler:1.1.0")
+        kapt("androidx.hilt:hilt-compiler:1.1.0")
+        implementation("androidx.hilt:hilt-work:1.1.0")
+
+        //live data
+        implementation("androidx.compose.runtime:runtime-livedata:1.5.4")
+
+        //firebase
+        implementation("androidx.work:work-runtime-ktx:2.9.0")
+
+
     }
 }

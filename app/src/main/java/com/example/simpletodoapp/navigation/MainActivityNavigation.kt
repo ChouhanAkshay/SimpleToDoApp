@@ -21,18 +21,13 @@ import dagger.hilt.android.AndroidEntryPoint
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MainActivityNavigation(mainViewModel: MainViewModel) {
-
     val navController = rememberNavController()
-//    val mainViewModel : MainViewModel = viewModel()
-
-    @OptIn(ExperimentalMaterial3Api::class)
-    val addNewTaskBottomsheetState = rememberModalBottomSheetState()
 
     NavHost(
         navController = navController, startDestination = NavigationConstants.MainActivityScreens.HOME.name
     ) {
         composable(NavigationConstants.MainActivityScreens.HOME.name) {
-            HomeScreen { isDailyTask, title ->
+            HomeScreen(mainViewModel) { isDailyTask, title ->
                 mainViewModel.addNewTodoItem(isDailyTask, title)
             }
         }

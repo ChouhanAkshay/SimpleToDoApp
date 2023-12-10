@@ -4,4 +4,8 @@
     <string name="enter_todo">Enter TO-DO</string>
     <string name="done">Done</string>
     <string name="add_in_daily_tasks">Do you want to add this as daily task?</string>
+    <string name="percent">%</string>
+    <string name="monthly_progress">Monthly progres:</string>
+    <string name="delete">Delete</string>
+    <string name="daily_progress">Daily Progress\n</string>
 </resources>
