@@ -87,11 +87,9 @@ class ToDoRepoImpl @Inject constructor(
     override suspend fun resetDailyTodo(): Boolean {
         timeStrampDataStore.data.first().let {
             val date = DateUtils.getTodayDate()
-            if (it.updatedAt.equals(date)) {
+            if (!it.updatedAt.equals(date)) {
                 timeStrampDataStore.updateData {
                     todoDataStore.updateData {
-                        Log.d("data ", "persisted work")
-
                         it.copy(
                             data = it.data.mutate { list ->
                                 val tempList = mutableListOf<ToDo>()
@@ -116,7 +114,6 @@ class ToDoRepoImpl @Inject constructor(
                             }
                         )
                     }
-                    Log.d("data ", "persisted work1")
                     it.copy(
                         updatedAt = date
                     )

@@ -38,6 +38,7 @@ import com.example.simpletodoapp.R
 import com.example.simpletodoapp.data.dataStore.model.ToDo
 import com.example.simpletodoapp.ui.theme.SimpleToDoAppTheme
 import com.example.simpletodoapp.utils.extension_functions.dpToPx
+import com.example.simpletodoapp.utils.helper.GeneralHelper.getRandomMidTonColor
 import kotlinx.coroutines.delay
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -80,9 +81,9 @@ fun ToDoTaskItem(
                     ConstraintLayout(modifier = Modifier.fillMaxWidth().wrapContentHeight()) {
                         val (content, background) = createRefs()
 
-                        DottedProgressFillView(
+                        CircularProgressFillView(
                             currentItem.monthlyCompletionProgress.toFloat(),
-                            dotColor = Color.Yellow,
+                            color = getRandomMidTonColor(),
                             modifier = Modifier.constrainAs(background) {
                                 top.linkTo(content.top)
                                 bottom.linkTo(content.bottom)
